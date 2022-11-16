@@ -1,0 +1,688 @@
+/* --------------------------google font: raleway -------------------------- 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*/
+/* -------------------------- google font -> integrated ---------------------------- */
+/* Regular */
+@font-face {
+    font-family: 'Raleway';
+    src: url(/fonts/Raleway-VariableFont_wght.ttf);
+}
+/* Italic */
+@font-face {
+    font-family: 'Raleway';
+    src: url(/fonts/Roboto-Black.ttf);
+}
+/* -------------------------- reset -------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* -------------------------- sections -------------------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    height: 120px;
+    width: 100%;
+    padding: 0px 10%;
+
+    /* shadow effects */
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2)
+}
+
+.header-logo-small {
+    display: none;
+}
+
+.header-nav-bar, .footer-nav-bar {
+    display: flex;
+    gap: 16px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.section-image, .creator {
+    padding: 0px 10%;
+    padding-top: 56px;
+}
+
+.section-list, .section-preperation {
+    padding: 0px 10%;
+    padding-top: 48px;
+}
+/*
+.section-list {
+    border-top: 1px solid rgba(239, 239, 239, 1);
+}
+*/
+.section-footer {
+    background-color: #403B3B;
+    padding: 0px 10%;
+}
+
+#section-footer-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-top: 36px;
+    padding-bottom: 64px;
+}
+
+.footer-row1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-row2 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+
+    padding-top: 36px;
+}
+
+
+/* - sections: start-index - */
+.section-fav-recipe {
+    display: flex;
+    flex-direction: row;
+
+    padding: 0px 10%;
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+.section-whats-new, .section-vs {
+    padding: 0px 10%;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+.section-whats-new {
+    background-color: rgba(239, 239, 239, 1);
+}
+
+.section-vs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 36px;
+}
+
+
+/* - sections: dsgvo + impressum - */
+.dsgvo, .impressum {
+    padding: 0px 10%;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+
+/* - sections: contact-us - */
+.section-contact-us {
+    padding: 0px 10%;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+#contact-name, #contact-text {
+    border-radius: 10px;
+}
+
+
+
+/* -------------------------- component -------------------------- */
+.header-tab {
+    text-decoration: none;
+    height: 36px;
+
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    letter-spacing: 0.15px;
+    /* 00. On Surface / High Emphasis */
+    color: rgba(0, 0, 0, 0.87);
+
+    /* for hover */
+    border-bottom: 4px solid transparent;
+    /* animation */
+    transition: all 0.2s ease-in-out;
+}
+
+.header-tab:hover {
+    /* 00. On Surface / High Emphasis */
+    color: #008000;
+    /* for hover */
+    border-bottom: 4px solid #008000;
+    /* animation */
+    transition: all 0.2s ease-in-out;
+}
+
+.header-img {
+    height: 260px;
+    width: 100%;
+    border-radius: 10px;
+
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding-bottom: 32px;
+
+    border-bottom: 1px solid rgba(239, 239, 239, 1);
+}
+
+.chip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: 36px;
+    padding: 4px 16px;
+    gap: 8px;
+
+    background-color: rgba(239, 239, 239, 1);
+    border-radius: 10px;
+}
+
+.chip-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.list-calculator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.text-field-btn {
+    display: flex;
+}
+
+.text-field {
+    height: 48px;
+    border-radius: 10px 0px 0px 10px;
+    border-color: rgba(239, 239, 239, 1);
+    border-style: solid;
+    padding: 16px;
+
+}
+
+#descr-textfield {
+    padding-right: 48px;
+}
+
+.btn {
+    height: 48px;
+    padding: 0px 32px;
+
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgba(0, 128, 0, 1);
+    border-style: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(1, 166, 1);
+}
+
+.list-ingredient {
+    display: flex;
+    flex-direction: column;
+}
+
+.ingredient {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 16px;
+
+    border-radius: 10px;
+}
+
+.list-ingredient tr:nth-child(odd) {
+    background-color: rgba(239, 239, 239, 1);
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.ingr-left {
+    width: 120px;
+}
+
+
+#bgr-grey {
+    background-color: rgba(239, 239, 239, 1);
+}
+
+.creator {
+    padding-bottom: 48px;
+}
+
+.creator-detail {
+    display: flex;
+    align-items: center;
+
+    padding-top: 16px;
+}
+
+.avatar-creator {
+    height: 56px;
+    width: 56px;
+
+    border-radius: 36px;
+    margin-right: 16px;
+
+    object-fit: cover;
+}
+
+
+/* - components: start-index - */
+.fav-recipe {
+    display: flex;
+    gap: 32px;
+}
+
+.fav-recipe-img {
+    height: 400px;
+    border-radius: 10px;
+}
+
+.btn-2 {
+    height: 48px;
+    padding: 0px 32px;
+    border-radius: 10px;
+
+    background-color: rgba(0, 128, 0, 1);
+    border-style: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    margin-top: 48px;
+}
+
+.btn-2:hover {
+    background-color: rgb(1, 166, 1);
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-whats-new-img {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+
+    margin-bottom: 16px;
+}
+
+.recipes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comparison {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.footer-logo {
+    filter: invert(1);
+    height: 48px;
+}
+
+.footer-social-media {
+    display: flex;
+    gap: 16px;
+}
+
+.social-media {
+    height: 36px;
+    width: 36px;
+}
+
+.footer-tab {
+    text-decoration: none;
+    height: 24px;
+
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    letter-spacing: 0.15px;
+    /* 00. On Surface / High Emphasis */
+    color: rgba(255, 255, 255, 0.87);
+
+    /* for hover */
+    border-bottom: 4px solid transparent;
+    /* animation */
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-tab:hover {
+    /* 00. On Surface / High Emphasis */
+    color: #ffffff;
+    /* for hover */
+    border-bottom: 2px solid #ffffff;
+    /* animation */
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* - components: dsgvo - */
+li {
+    padding-left: 16px;
+    list-style-type: none;
+}
+
+
+/* - components: contact - */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-name {
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+#contact-text {
+    height: 240px;
+    width: 100%;
+}
+
+/* - components: mail send successful - */
+.header-mail-success {
+    padding: 0px 10%;
+    padding-top: 36px;
+}
+
+
+
+/* -------------------------- responsiveness -------------------------- */
+@media (max-width: 1060px) {
+    .header {
+        align-items: center;
+    }
+
+    .header-nav-bar {
+        display: none;
+    }
+
+    .header-logo {
+        display: none;
+    }
+
+    .header-logo-small {
+        display: flex;
+    }
+
+    #logo-small {
+        display: flex;
+        height: 56px;
+    }
+
+    .menu-icon {
+        display: flex;
+        height: 48px;
+        width: 48px;
+    }
+}
+
+@media (max-width: 940px) {
+    .filter {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 8px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-nav-bar {
+        flex-direction: column;
+        padding-top: 32px;
+    }
+
+    .footer-row2 {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 580px) {
+    .ingredient {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list-calculator {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #descr-textfield {
+        padding-bottom: 16px;
+    }
+}
+
+@media (max-width: 410px) {
+    .text-field {
+        width: 80px;
+    }
+
+    .footer-row2 {
+        flex-direction: column;
+    }
+}
+
+/* -- responsiveness start-index --*/
+@media (max-width: 1200px){
+    .recipe-whats-new-img {
+        height: 240px;
+        width: 240px;
+    }
+}
+
+@media (max-width: 1060px){
+    .fav-recipe {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fav-recipe-img {
+        object-fit: cover;
+    }
+
+    .recipe-whats-new-img {
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 940px){
+    .section-header-center {
+        align-items: flex-start;
+    }
+    
+    .recipes {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .recipe {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 36px;
+        width: 100%;
+    }
+
+    .img-link {
+        width: 100%;
+    }
+
+    .recipe-whats-new-img {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    .fav-recipe-img {
+        height: 240px;
+    }
+
+    .comparison {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .fav-recipe-img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 580px) {
+    .recipe-whats-new-img {
+        object-fit: cover;
+    }
+}
+
+ 
+/* -------------------------- fonts -------------------------- */
+h1, h2, h3, .body-1,.body-1-bold, .body-2, li, em {
+    font-family: 'Raleway';
+    font-style: normal;
+
+    /* 00. On Surface / High Emphasis */
+    color: rgba(0, 0, 0, 0.87);
+
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+
+    padding-bottom: 16px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 36px;
+
+    padding-bottom: 24px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    letter-spacing: 0.15px;
+}
+
+.body-1 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    letter-spacing: 0.5px;
+}
+
+.body-1-bold {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    letter-spacing: 0.5px;
+}
+
+.body-1-btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.body-2, li {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    letter-spacing: 0.25px;
+}
+
+em {
+    font-weight: 300;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    letter-spacing: 0.25px;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 128, 0, 1);
+}
+
+#footer-link {
+    color: rgba(255, 255, 255, 1);
+}
+#footer-link:hover {
+    color: rgba(0, 128, 0, 1);
+    transition: all 0.2s ease-in-out;
+}

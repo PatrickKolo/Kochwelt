@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt - Pasta Pomodoro</title>
+    <!-- link css-->
+    <link rel="stylesheet" href="/style.css">
+    <!-- link js -->
+    <script src="script.js"></script>
+</head>
+
+<body onload="includeHTML()">
+
+    <!-- section header -->
+    <div class="section-header">
+        <div w3-include-html="/templates/header.html"></div>
+    </div>
+
+    <!-- section image -->
+    <div class="section-image">
+        <h1>Pasta Pomodoro</h1>
+        <img class="header-img" src="/img/recipes/pasta.jpg" alt="pasta pomodoro">
+        <div class="filter">
+            <div class="chip">
+                <img class="chip-icon" src="/img/icons/clock-regular.svg" alt="clock icon">
+                <p class="body-2">15 Min.</p>
+            </div>
+            <div class="chip">
+                <img class="chip-icon" src="/img/icons/brain-solid.svg" alt="clock icon">
+                <p class="body-2">simpel</p>
+            </div>
+            <div class="chip">
+                <img class="chip-icon" src="/img/icons/calendar-alt-regular.svg" alt="clock icon">
+                <p class="body-2">13.12.2022</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- section list -->
+    <div class="section-list">
+        <div w3-include-html="/templates/recipe2/list-recipe2.html"></div>
+    </div>
+
+    <!-- section preperation -->
+    <div class="section-preperation">
+        <h2>Zubereitung</h2>
+        <div class="filter">
+            <div class="chip">
+                <img class="chip-icon" src="/img/icons/clock-regular.svg" alt="clock icon">
+                <p class="body-2">Arbeitszeit ca. 15 Min.</p>
+            </div>
+            <div class="chip">
+                <img class="chip-icon" src="/img/icons/clock-regular.svg" alt="clock icon">
+                <p class="body-2">Gesamtzeit ca. 15 Min.</p>
+            </div>
+        </div>
+        <div w3-include-html="/templates/recipe2/preperation-recipe2.html"></div>
+    </div>
+
+    <!-- section creator -->
+    <div class="creator">
+        <h3>Rezept erstellt von</h3>
+        <div class="creator-detail">
+            <img class="avatar-creator" src="/img/profiles/kolo.jpg" alt="Kolo">
+            <p class="body-1">Kolo</p>
+        </div>
+    </div>
+
+    <!-- section footer -->
+    <div class="section-footer">
+        <div w3-include-html="/templates/footer.html"></div>
+    </div>
+
+    
+</body>
